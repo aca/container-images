@@ -17,6 +17,7 @@ jobs:
           - "watchexec"
           - "ttyd-k9s"
           - "kube-events"
+          - "go-dev"
 
     runs-on: ubuntu-latest
     permissions:
