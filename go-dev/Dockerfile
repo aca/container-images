@@ -7,3 +7,5 @@ COPY go.sum .
 RUN go mod download
 
 COPY . .
+
+ENTRYPOINT ["go", "run", "."]
