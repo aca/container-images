@@ -4,12 +4,13 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"os"
 
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
-    db, err := sql.Open("mysql", "")
+    db, err := sql.Open("mysql", os.Args[1])
     defer db.Close()
 
     if err != nil {
