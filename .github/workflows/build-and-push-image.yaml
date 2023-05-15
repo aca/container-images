@@ -14,10 +14,11 @@ jobs:
     strategy:
       matrix:
         context:
-          - "watchexec"
-          - "ttyd-k9s"
-          - "kube-events"
-          - "go-dev"
+          # - "watchexec"
+          # - "ttyd-k9s"
+          # - "kube-events"
+          # - "go-dev"
+          - "helloworld"
 
     runs-on: ubuntu-latest
     permissions:
