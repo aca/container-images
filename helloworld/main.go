@@ -7,7 +7,7 @@ import (
 )
 
 func version(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "v1")
+	fmt.Fprint(w, "v2")
 }
 
 func main() {
