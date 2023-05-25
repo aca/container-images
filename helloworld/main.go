@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"time"
 )
 
 func version(w http.ResponseWriter, r *http.Request) {
@@ -11,6 +12,13 @@ func version(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	log.Println("hello world")
+	go func() {
+		time.Sleep(time.Second * 30)
+		log.Fatal("crash")
+	}()
+
 	http.HandleFunc("/", version)
 	log.Fatal(http.ListenAndServe(":8080", nil))
+	
 }
